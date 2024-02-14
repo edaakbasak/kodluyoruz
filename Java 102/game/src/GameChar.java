@@ -1,4 +1,4 @@
-public class GameChar {
+public abstract class GameChar {
 
     private int damage;
     private int healthy;
