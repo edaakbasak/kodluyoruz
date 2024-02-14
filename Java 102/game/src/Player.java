@@ -10,6 +10,11 @@ public class Player {
         this.name = name;
     }
 
+    void selectChar(){
+        System.out.println("Karakter : Samuray \t Hasar : 5 \t Sağlık : 21 \t Para : 15");
+        System.out.println("Karakter : Okçu \t Hasar : 7 \t Sağlık : 18 \t Para : 20");
+        System.out.println("Karakter : Şövalye \t Hasar : 8 \t Sağlık : 24 \t Para : 5");
+    }
     public int getDamage() {
         return damage;
     }
@@ -48,8 +53,5 @@ public class Player {
 
     public void setCharName(String charName) {
         this.charName = charName;
-    }
-
-    void selectChar(){
     }
 }
