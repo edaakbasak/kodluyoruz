@@ -1,10 +1,14 @@
-public abstract class GameChar {
+public class GameChar {
 
+    private int id;
+    private String name;
     private int damage;
     private int healthy;
     private int money;
 
-    public GameChar(int damage, int healthy, int money) {
+    public GameChar(int id, String name, int damage, int healthy, int money) {
+        this.id = id;
+        this.name = name;
         this.damage = damage;
         this.healthy = healthy;
         this.money = money;
@@ -32,5 +36,21 @@ public abstract class GameChar {
 
     public void setMoney(int money) {
         this.money = money;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
