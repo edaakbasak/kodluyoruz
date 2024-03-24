@@ -8,10 +8,35 @@ public class Game {
         String playerName;
         System.out.println("Oyuna Hoşgeldiniz");
         System.out.println("İsminizi girin:");
-        playerName = inp.nextLine();
+        //String playerName = inp.nextLine();
         Player player = new Player("eyyo");
         System.out.println("Sayın " + player.getName() + " Hoşgeldiniz");
         System.out.println("Lütfen karakterinizi seçiniz");
         player.selectChar();
+
+        Location location = null;
+
+        while (true) {
+            System.out.println("Bölgeler");
+            System.out.println("1- Güvenli Ev");
+            System.out.println("2- Mağaza");
+            System.out.println("Lütfen gitmek istediğiniz bölgeyi seçiniz:");
+            int selectloc = inp.nextInt();
+            switch (selectloc) {
+                case 1:
+                    location = new SafeHouse(player);
+                    break;
+                case 2:
+                    location = new ToolStore(player);
+                    break;
+                default:
+                    location = new SafeHouse(player);
+
+            }
+            if (location.onLocation() == false){
+                System.out.println("Game Over!");
+                break;
+            }
+        }
     }
 }

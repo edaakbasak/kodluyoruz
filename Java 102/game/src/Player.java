@@ -50,6 +50,7 @@ public class Player {
                 + ", Sağlık : " + this.getHealthy()
                 + ", Para : " + this.getMoney());
     }
+
     public void initPlayer(GameChar gameChar){
         this.setDamage(gameChar.getDamage());
         this.setHealthy(gameChar.getHealthy());

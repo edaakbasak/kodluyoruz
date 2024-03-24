@@ -1,8 +1,30 @@
-public class Location extends Game {
-    boolean onLocation;
+import java.util.Scanner;
 
-    void Location(){
+public abstract class Location {
+    private Player player;
+    private String name;
+    public static Scanner inp = new Scanner(System.in);
 
+    public Location(Player player, String name) {
+        this.player = player;
+        this.name = name;
     }
 
+    abstract boolean onLocation();
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
