@@ -17,6 +17,7 @@ public class Game {
         Location location = null;
 
         while (true) {
+            player.printInfo();
             System.out.println("Bölgeler");
             System.out.println("1- Güvenli Ev");
             System.out.println("2- Mağaza");
